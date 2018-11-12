@@ -1,0 +1,29 @@
+server:
+  port: 7002
+
+#默认使用配置
+spring:
+  profiles:
+    active: dev
+
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+
+
+#spring:
+#  application:
+#    name: gofashion-cloud-orders-alipay
+#  zipkin:
+#    base-url: http://116.62.167.249:6601
+#  sleuth:
+#    sampler:
+#      percentage: 1.0
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://39.105.144.41:6001/eureka/
+#
+#logging:
+#    level: info
+
