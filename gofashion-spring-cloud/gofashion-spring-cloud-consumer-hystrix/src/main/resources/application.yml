@@ -1,0 +1,9 @@
+server:
+  port: 6701
+spring:
+  application:
+    name: gofashion-spring-cloud-consumer-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.100.246.114:6001/eureka/

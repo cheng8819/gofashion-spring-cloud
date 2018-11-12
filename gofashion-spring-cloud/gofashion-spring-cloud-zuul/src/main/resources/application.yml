@@ -1,0 +1,24 @@
+server:
+  port: 6101
+spring:
+  application:
+    name: gofashion-spring-cloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.100.246.114:6001/eureka/
+zuul:
+  routes:
+    #gofashion-cloud-cart-consumer: /cart/**
+    gofashion-cloud-carts-consumer: /carts/**
+    gofashion-cloud-userinfos-consumer: /userinfos/**
+    gofashion-cloud-orders-consumer: /orders/**
+    gofashion-cloud-auction-consumer: /auction/**
+    gofashion-cloud-goods-consumer: /goods/**
+    #gofashion-cloud-xxx-consumer: /xxx/**
+    #gofashion-cloud-xxx-consumer: /xxx/**
+    #gofashion-cloud-xxx-consumer: /xxx/**
+  strip-prefix: false
+  sensitive-headers: Cookie,Set-Cookie,Authorization
+
+
