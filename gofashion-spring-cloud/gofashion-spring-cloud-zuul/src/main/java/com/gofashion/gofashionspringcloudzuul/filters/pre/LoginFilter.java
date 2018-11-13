@@ -60,7 +60,6 @@ public class LoginFilter extends ZuulFilter {
                     token = cookie.getValue();
                 }
             }
-
             Claims claims = jwtTokenProvider.validataToken(token);
             Integer userId = Integer.parseInt((String) claims.get("sub"));
             System.out.println(userId);
@@ -74,7 +73,6 @@ public class LoginFilter extends ZuulFilter {
             requestQueryParams.put("userId", arrayList);
             System.out.println(JSON.toJSONString(requestQueryParams));
             ctx.setRequestQueryParams(requestQueryParams);
-
         } else {
             System.out.println("else");
             ctx.setResponseBody("未登陆");
