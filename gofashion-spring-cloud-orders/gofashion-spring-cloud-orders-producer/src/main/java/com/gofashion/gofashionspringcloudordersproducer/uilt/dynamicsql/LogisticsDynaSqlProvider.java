@@ -39,9 +39,6 @@ public class LogisticsDynaSqlProvider {
                 if(logistics.getLogistics_informationID()!=null) {
                     VALUES("logistics_informationID","#{logistics_informationID}");
                 }
-                if(logistics.getLogistics_userId()!=null) {
-                    VALUES("logistics_userId","#{logistics_userId}");
-                }
                 if(logistics.getLogistics_a()!=null) {
                     VALUES("logistics_a","#{logistics_a}");
                 }
@@ -54,7 +51,6 @@ public class LogisticsDynaSqlProvider {
             }
         }.toString();
     }
-
     //updateUserSql
     public String updateSql(Logistics logistics) {
         return new SQL() {
@@ -86,9 +82,6 @@ public class LogisticsDynaSqlProvider {
                 }
                 if(logistics.getLogistics_informationID()!=null) {
                     SET("logistics_informationID=#{logistics_informationID}");
-                }
-                if(logistics.getLogistics_userId()!=null) {
-                    VALUES("logistics_userId","#{logistics_userId}");
                 }
                 if(logistics.getLogistics_a()!=null) {
                     SET("logistics_a=#{logistics_a}");

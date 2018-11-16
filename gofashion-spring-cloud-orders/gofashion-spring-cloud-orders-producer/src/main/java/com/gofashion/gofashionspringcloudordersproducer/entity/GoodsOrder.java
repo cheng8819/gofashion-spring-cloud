@@ -1,23 +1,18 @@
 package com.gofashion.gofashionspringcloudordersproducer.entity;
 
+import io.swagger.models.auth.In;
+
 public class GoodsOrder {
     private Integer goods_orderID;
     //商品id
     private Integer goods_id;
     //sku
-    private String goods_sku;
+    private Integer goods_sku;
     //单价
     private Double goods_money;
     //数量
     private Integer goods_quantity;
-    //订单状态
-    //
-    //交易成功(0),
-    //交易关闭(1)
-    //待付款(3)
-    //待发货(4)
-    //待收货(5)
-    //待评价(6)
+    //订单状态  交易成功(0), 交易关闭(1)  待付款(3)  待发货(4)  待收货(5)   待评价(6)
     private Integer goods_orderStatus;
     //接受状态
     //（普通0、秒杀1、拼团2、闪购3、）
@@ -28,7 +23,7 @@ public class GoodsOrder {
     private String goods_estimate;
     //关联订单信息（外键id）
     private Integer goods_informationID;
-
+    //店铺id
     private Integer goods_shopID;
 
     private String goods_a;
@@ -36,14 +31,6 @@ public class GoodsOrder {
     private String goods_b;
 
     private String goods_c;
-
-    public String getGoods_a() {
-        return goods_a;
-    }
-
-    public void setGoods_a(String goods_a) {
-        this.goods_a = goods_a;
-    }
 
     public Integer getGoods_orderID() {
         return goods_orderID;
@@ -61,11 +48,11 @@ public class GoodsOrder {
         this.goods_id = goods_id;
     }
 
-    public String getGoods_sku() {
+    public Integer getGoods_sku() {
         return goods_sku;
     }
 
-    public void setGoods_sku(String goods_sku) {
+    public void setGoods_sku(Integer goods_sku) {
         this.goods_sku = goods_sku;
     }
 
@@ -131,6 +118,14 @@ public class GoodsOrder {
 
     public void setGoods_shopID(Integer goods_shopID) {
         this.goods_shopID = goods_shopID;
+    }
+
+    public String getGoods_a() {
+        return goods_a;
+    }
+
+    public void setGoods_a(String goods_a) {
+        this.goods_a = goods_a;
     }
 
     public String getGoods_b() {

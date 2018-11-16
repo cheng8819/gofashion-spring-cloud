@@ -27,6 +27,9 @@ public class OrderInformationDynaSqlProvider {
                 if(orderInformation.getInformation_clinchTime()!=null) {
                     VALUES("information_clinchTime", "#{information_clinchTime}");
                 }
+                if(orderInformation.getInformation_userId()!=null) {
+                    VALUES("information_userId", "#{information_userId}");
+                }
                 if(orderInformation.getInformation_a()!=null) {
                     VALUES("information_a", "#{information_a}");
                 }
@@ -59,6 +62,9 @@ public class OrderInformationDynaSqlProvider {
                 }
                 if(orderInformation.getInformation_clinchTime()!=null) {
                     SET("information_clinchTime=#{information_clinchTime}");
+                }
+                if(orderInformation.getInformation_userId()!=null) {
+                    SET("information_userId=#{information_userId}");
                 }
                 if(orderInformation.getInformation_a()!=null) {
                     SET("information_a=#{information_a}");

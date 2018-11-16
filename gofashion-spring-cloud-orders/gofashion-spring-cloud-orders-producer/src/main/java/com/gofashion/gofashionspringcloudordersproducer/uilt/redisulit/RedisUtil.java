@@ -1,7 +1,7 @@
 package com.gofashion.gofashionspringcloudordersproducer.uilt.redisulit;
 
 import com.alibaba.fastjson.JSONArray;
-import com.gofashion.gofashionspringcloudordersproducer.service.vo.RedisTimeEntity;
+import com.gofashion.gofashionspringcloudordersproducer.service.vo.RedisOrderEntity;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
@@ -396,9 +396,9 @@ public class RedisUtil {
             return null;
         }
     }
-    public List<RedisTimeEntity> lGets(String key, long start, long end){
+    public List<RedisOrderEntity> lGets(String key, long start, long end){
         try {
-            List<RedisTimeEntity> range = JSONArray.parseArray(redisTemplate.opsForList().range(key, start, end).toString(),RedisTimeEntity.class);
+            List<RedisOrderEntity> range = JSONArray.parseArray(redisTemplate.opsForList().range(key, start, end).toString(),RedisOrderEntity.class);
             return range;
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.gofashion.gofashionspringcloudordersproducer.controller;
+/*package com.gofashion.gofashionspringcloudordersproducer.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,4 +12,4 @@ public class CommonController {
         System.out.println(message);
         return message + "消息";
     }
-}
+}*/

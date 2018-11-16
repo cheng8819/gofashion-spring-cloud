@@ -1,5 +1,7 @@
 package com.gofashion.gofashionspringcloudordersproducer.uilt.expressulit;
 
+import org.springframework.stereotype.Component;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -21,6 +23,7 @@ import java.util.Map;
  * 
  * ID和Key请到官网申请：http://www.kdniao.com/ServiceApply.aspx
  */
+@Component
 public class KdniaoTrackQueryAPI {
 	
 	//DEMO
@@ -40,7 +43,7 @@ public class KdniaoTrackQueryAPI {
 	//电商加密私钥，快递鸟提供，注意保管，不要泄漏
 	private String AppKey="a7811b71-6ab4-407e-8d6a-5bfbe797382e";
 	//请求url
-	private String ReqURL="http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx";	
+	private String ReqURL="http://api.kdniao.com/Ebusiness/EbusinessOrderHandle.aspx";
  
 	/**
      * Json方式 查询订单物流轨迹

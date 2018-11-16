@@ -16,7 +16,7 @@ public class Ergodic {
         Iterator<String> keys = map.keySet().iterator();
         while(keys.hasNext()){
             String key = keys.next();
-            System.out.print(key + ":" + map.get(key).intValue() + ", ");
+//            System.out.print(key + ":" + map.get(key).intValue() + ", ");
             stringList1.add(key);
         }
         return stringList1;

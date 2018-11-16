@@ -5,10 +5,7 @@ import java.util.Date;
 public class Logistics {
     //物流id
     private Integer logistics_id;
-    //物流状态
-    //已发货(1)
-    //运输中(2)
-    //已签收(3)
+    //物流状态    已发货(1)   运输中(2)    已签收(3)
     private Integer logistics_status;
     //收件人
     private String logistics_recipients;
@@ -24,24 +21,16 @@ public class Logistics {
     private String logistics_leaveWord;
     //发货时间
     private Date logistics_deliverTime;
-    //订单信息id(外键)
+    //订单编号
     private Integer logistics_informationID;
-
-    public Integer getLogistics_informationID() {
-        return logistics_informationID;
-    }
-
-    public void setLogistics_informationID(Integer logistics_informationID) {
-        this.logistics_informationID = logistics_informationID;
-    }
-
-    private Integer logistics_userId;
 
     private String logistics_a;
 
     private String logistics_b;
 
     private String logistics_c;
+
+    private OrderInformation orderInformation;
 
     public Integer getLogistics_id() {
         return logistics_id;
@@ -115,6 +104,14 @@ public class Logistics {
         this.logistics_deliverTime = logistics_deliverTime;
     }
 
+    public Integer getLogistics_informationID() {
+        return logistics_informationID;
+    }
+
+    public void setLogistics_informationID(Integer logistics_informationID) {
+        this.logistics_informationID = logistics_informationID;
+    }
+
     public String getLogistics_a() {
         return logistics_a;
     }
@@ -139,11 +136,11 @@ public class Logistics {
         this.logistics_c = logistics_c;
     }
 
-    public Integer getLogistics_userId() {
-        return logistics_userId;
+    public OrderInformation getOrderInformation() {
+        return orderInformation;
     }
 
-    public void setLogistics_userId(Integer logistics_userId) {
-        this.logistics_userId = logistics_userId;
+    public void setOrderInformation(OrderInformation orderInformation) {
+        this.orderInformation = orderInformation;
     }
 }

@@ -54,7 +54,6 @@ public class GoodsOrderDynaSqlProvider {
             }
         }.toString();
     }
-
     //updateUserSql
     public String updateSql(GoodsOrder goodsOrder) {
         return new SQL() {

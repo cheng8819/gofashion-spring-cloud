@@ -1,6 +1,8 @@
 package com.gofashion.gofashionspringcloudordersproducer.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class OrderInformation {
     private Integer information_id;
@@ -14,14 +16,18 @@ public class OrderInformation {
     private Date information_paymentTime;
     //成交时间
     private Date information_clinchTime;
-//    //物流id(外键)
-//    private Integer information_logisticsID;
+    //用户id
+    private Integer information_userId;
 
     private String information_a;
 
     private String information_b;
 
     private String information_c;
+
+    private List<GoodsOrder> goodsOrderList = new ArrayList<>();
+
+    private Logistics logistics;
 
     public Integer getInformation_id() {
         return information_id;
@@ -71,13 +77,13 @@ public class OrderInformation {
         this.information_clinchTime = information_clinchTime;
     }
 
-//    public Integer getInformation_logisticsID() {
-//        return information_logisticsID;
-//    }
-//
-//    public void setInformation_logisticsID(Integer information_logisticsID) {
-//        this.information_logisticsID = information_logisticsID;
-//    }
+    public Integer getInformation_userId() {
+        return information_userId;
+    }
+
+    public void setInformation_userId(Integer information_userId) {
+        this.information_userId = information_userId;
+    }
 
     public String getInformation_a() {
         return information_a;
@@ -101,5 +107,21 @@ public class OrderInformation {
 
     public void setInformation_c(String information_c) {
         this.information_c = information_c;
+    }
+
+    public List<GoodsOrder> getGoodsOrderList() {
+        return goodsOrderList;
+    }
+
+    public void setGoodsOrderList(List<GoodsOrder> goodsOrderList) {
+        this.goodsOrderList = goodsOrderList;
+    }
+
+    public Logistics getLogistics() {
+        return logistics;
+    }
+
+    public void setLogistics(Logistics logistics) {
+        this.logistics = logistics;
     }
 }

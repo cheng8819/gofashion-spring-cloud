@@ -29,7 +29,7 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("Spring Boot 测试使用 Swagger2 构建RESTful API")
+                .title("Gofashion Spring Cloud Order 订单 Swagger2")
                 //创建人
                 .contact(new Contact("MarryFeng", "http://www.baidu.com", ""))
                 //版本号
