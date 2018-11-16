@@ -1,0 +1,49 @@
+#Ĭ��ʹ������
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 7002
+
+spring:
+  application:
+    name: gofashion-spring-cloud-alipay-producer
+  zipkin:
+    base-url: http://116.62.167.249:6601
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+  rabbitmq:
+    host: 47.100.246.114
+    port: 5672
+    username: fashion
+    password: fashion
+    virtual-host: /goFashion
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      simple:
+        prefetch: 1
+
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.100.246.114:6001/eureka/
+  #instance:
+
+    #prefer-ip-address: true
+logging:
+    level: info

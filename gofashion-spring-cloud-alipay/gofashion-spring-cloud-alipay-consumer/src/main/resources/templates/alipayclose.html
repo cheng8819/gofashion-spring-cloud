@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>交易关闭</title>
+</head>
+<body>
+<form name="tradeclose" action="alipay/close" method="post"
+      target="_blank">
+    <div id="body5" class="tab-content" name="divcontent">
+        <dl class="content">
+            <dt>商户订单号 ：</dt>
+            <dd>
+                <input id="WIDTCout_trade_no" name="WIDTCout_trade_no"/>
+            </dd>
+            <dt>支付宝交易号 ：</dt>
+            <dd>
+                <input id="WIDTCtrade_no" name="WIDTCtrade_no"/>
+            </dd>
+            <dt></dt>
+            <dd id="btn-dd">
+						<span class="new-btn-login-sp">
+							<button class="new-btn-login" type="submit"
+                                    style="text-align: center;">交 易 关 闭</button>
+						</span> <span class="note-help">商户订单号与支付宝交易号二选一，如果您点击“交易关闭”按钮，即表示您同意该次的执行操作。</span>
+            </dd>
+        </dl>
+    </div>
+</form>
+</body>
+</html>

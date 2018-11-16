@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>交易查询</title>
+</head>
+<body>
+<form name="tradequery" action="alipay/query" method="post"
+      target="_blank">
+    <div id="body2" class="tab-content" name="divcontent">
+        <dl class="content">
+            <dt>商户订单号 ：</dt>
+            <dd>
+                <input id="WIDTQout_trade_no" name="WIDTQout_trade_no"/>
+            </dd>
+            <dt>支付宝交易号 ：</dt>
+            <dd>
+                <input id="WIDTQtrade_no" name="WIDTQtrade_no"/>
+            </dd>
+            <dt></dt>
+            <dd id="btn-dd">
+						<span class="new-btn-login-sp">
+							<button class="new-btn-login" type="submit"
+                                    style="text-align: center;">交 易 查 询</button>
+						</span> <span class="note-help">商户订单号与支付宝交易号二选一，如果您点击“交易查询”按钮，即表示您同意该次的执行操作。</span>
+            </dd>
+        </dl>
+    </div>
+</form>
+</body>
+</html>

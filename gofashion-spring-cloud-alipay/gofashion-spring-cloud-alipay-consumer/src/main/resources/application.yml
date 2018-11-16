@@ -1,0 +1,29 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: gofashion-spring-cloud-alipay-consumer
+  zipkin:
+    base-url: http://116.62.167.249:6601
+    #日志追踪系统  追踪服务的的端口
+  sleuth:
+    sampler:
+      percentage: 1.0
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.100.246.114:6001/eureka/
+
+  #instance:
+    #instance-id: loginandergister
+    #prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+logging:
+    level: info

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>退款</title>
+</head>
+<body>
+<form name="traderefund" action="alipay/refund" method="post"
+      target="_blank">
+    <div id="body3" class="tab-content" name="divcontent">
+        <dl class="content">
+            <dt>商户订单号 ：</dt>
+            <dd>
+                <input id="WIDTRout_trade_no" name="WIDTRout_trade_no"/>
+            </dd>
+            <dt>支付宝交易号 ：</dt>
+            <dd>
+                <input id="WIDTRtrade_no" name="WIDTRtrade_no"/>
+            </dd>
+            <dt>退款金额 ：</dt>
+            <dd>
+                <input id="WIDTRrefund_amount" name="WIDTRrefund_amount"/>
+            </dd>
+            <dt>退款原因 ：</dt>
+            <dd>
+                <input id="WIDTRrefund_reason" name="WIDTRrefund_reason"/>
+            </dd>
+            <dt>退款请求号 ：</dt>
+            <dd>
+                <input id="WIDTRout_request_no" name="WIDTRout_request_no"/>
+            </dd>
+            <dt></dt>
+            <dd id="btn-dd">
+						<span class="new-btn-login-sp">
+							<button class="new-btn-login" type="submit"
+                                    style="text-align: center;">退 款</button>
+						</span> <span class="note-help">商户订单号与支付宝交易号二选一，如果您点击“退款”按钮，即表示您同意该次的执行操作。</span>
+            </dd>
+        </dl>
+    </div>
+</form>
+</body>
+</html>
